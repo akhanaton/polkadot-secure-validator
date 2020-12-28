@@ -10,3 +10,4 @@ public_keyfile.pub
 validator_keyfile
 validator_keyfile.pub
 credentials.json
+ansible/inventory.yml
