@@ -1,0 +1,4 @@
+server {
+  listen 0.0.0.0:{{ node_metrics_port }};
+  proxy_pass localhost:9615;
+}
