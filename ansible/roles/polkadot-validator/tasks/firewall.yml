@@ -14,6 +14,10 @@
   command: ufw allow 22/tcp
   when: not ufw_status_result.stdout is search("22/tcp.*ALLOW IN.*Anywhere")
 
+- name: open node_metrics port
+  command: ufw allow {{ node_metrics_port }}/tcp
+  when: not ufw_status_result.stdout is search(node_metrics_port ~ "/tcp.*ALLOW IN.*Anywhere")
+
 - name: open node_exporter port
   command: ufw allow 9100/tcp
   when:
