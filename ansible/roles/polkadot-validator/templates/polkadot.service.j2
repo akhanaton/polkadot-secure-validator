@@ -11,6 +11,7 @@ ExecStart=/usr/local/bin/polkadot \
   --listen-addr=/ip4/127.0.0.1/tcp/{{ p2p_port }} \
   --rpc-methods=Unsafe \
   --in-peers=50 \
+  --out-peers=50 \
   --database=paritydb \
   {% if hostvars[inventory_hostname].polkadot_additional_common_flags is defined and hostvars[inventory_hostname].polkadot_additional_common_flags|length %}
   {{ hostvars[inventory_hostname].polkadot_additional_common_flags }} \
