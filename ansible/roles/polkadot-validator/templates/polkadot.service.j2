@@ -12,6 +12,7 @@ ExecStart=/usr/local/bin/polkadot \
   --rpc-methods=Unsafe \
   --in-peers=75 \
   --out-peers=75 \
+  --wasm-execution=Compiled \
   --database=paritydb \
   {% if hostvars[inventory_hostname].polkadot_additional_common_flags is defined and hostvars[inventory_hostname].polkadot_additional_common_flags|length %}
   {{ hostvars[inventory_hostname].polkadot_additional_common_flags }} \
