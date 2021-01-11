@@ -13,7 +13,6 @@ ExecStart=/usr/local/bin/polkadot \
   --in-peers=100 \
   --out-peers=100 \
   --wasm-execution=Compiled \
-  --database=paritydb \
   {% if hostvars[inventory_hostname].polkadot_additional_common_flags is defined and hostvars[inventory_hostname].polkadot_additional_common_flags|length %}
   {{ hostvars[inventory_hostname].polkadot_additional_common_flags }} \
   {% endif %}
