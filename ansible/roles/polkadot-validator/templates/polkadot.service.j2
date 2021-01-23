@@ -13,7 +13,7 @@ ExecStart=/usr/local/bin/polkadot \
   --ws-port=9944 \
   --unsafe-ws-external \
   --rpc-cors=all \  
-  --wasm-execution=Compiled \
+  --wasm-execution=Compiled 
   {% if hostvars[inventory_hostname].polkadot_additional_common_flags is defined and hostvars[inventory_hostname].polkadot_additional_common_flags|length %}
   {{ hostvars[inventory_hostname].polkadot_additional_common_flags }} \
   {% endif %}
