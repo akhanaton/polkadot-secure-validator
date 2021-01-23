@@ -11,7 +11,7 @@ ExecStart=/usr/local/bin/polkadot \
   --listen-addr=/ip4/127.0.0.1/tcp/{{ p2p_port }} \
   --rpc-methods=Unsafe \
   --ws-port=9944 \
-  --unsafe-ws-external
+  --unsafe-ws-external \
   --rpc-cors=all \  
   --wasm-execution=Compiled \
   {% if hostvars[inventory_hostname].polkadot_additional_common_flags is defined and hostvars[inventory_hostname].polkadot_additional_common_flags|length %}
