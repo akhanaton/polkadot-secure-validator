@@ -10,4 +10,5 @@ public_keyfile.pub
 validator_keyfile
 validator_keyfile.pub
 credentials.json
-ansible/inventory.yml
+ansible/kusama-inventory.yml
+ansible/polkadot-inventory.yml
