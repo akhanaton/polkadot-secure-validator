@@ -3,7 +3,7 @@
 proxy_port: 80
 p2p_port: 30333
 node_metrics_port: 9614
-ws_api_port: 9944
+ws_api_port: 9945
 chain: "kusama"
 polkadot_network_id: "ksmcc3"
 subkey_binary_url: "https://github.com/w3f/substrate/releases/download/e0f3fa/subkey"
