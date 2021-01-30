@@ -1,4 +1,8 @@
 server {
   listen 0.0.0.0:{{ ws_api_port }};
   proxy_pass localhost:9944;
+
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
 }
