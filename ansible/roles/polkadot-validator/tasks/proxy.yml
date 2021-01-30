@@ -32,6 +32,12 @@
     dest: /etc/nginx/streams-enabled/polkadot-metrics-proxy.conf
     mode: 0600
 
+- name: create web socket proxy service file
+  template:
+    src: ws-proxy.conf.j2
+    dest: /etc/nginx/streams-enabled/ws-proxy.conf
+    mode: 0600
+
 - name: restart nginx service
   systemd:
     name: nginx

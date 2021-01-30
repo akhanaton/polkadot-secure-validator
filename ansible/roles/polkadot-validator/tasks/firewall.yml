@@ -24,6 +24,10 @@
     - node_exporter_enabled|default(false)|bool
     - not ufw_status_result.stdout is search("9100/tcp.*ALLOW IN.*Anywhere")
 
+- name: open web_sockets port
+  command: ufw allow {{ ws_api_port }}/tcp
+  when: not ufw_status_result.stdout is search(ws_api_port ~ "/tcp.*ALLOW IN.*Anywhere")
+
 - name: open proxy port
   command: ufw allow {{ proxy_port }}/tcp
   when:
