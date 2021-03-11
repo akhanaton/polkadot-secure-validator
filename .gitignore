@@ -12,3 +12,4 @@ validator_keyfile.pub
 credentials.json
 ansible/kusama-inventory.yml
 ansible/polkadot-inventory.yml
+ansible/hydra-inventory.yml
